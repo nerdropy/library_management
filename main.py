@@ -26,10 +26,10 @@ class Library:
         delBook = input("Type the title of the book you want to delete: ")
 
         listof = self.lib.read().splitlines()
+        print(listof)
 
         for line in listof:
             new_list = line.split(', ') #assign the current book content to a list
-            print(new_list)
             if new_list[0] == delBook: #check if the book title matches with the input
                 listof.remove(line) #remove the contents of the book from the list
                 self.lib.truncate(0) #remove all the content in the .txt file starting from the first byte
