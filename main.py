@@ -1,3 +1,5 @@
+import tkinter as tk
+
 class Library:
     def __init__(self):
         self.lib = open('books.txt', 'a+')
@@ -33,8 +35,8 @@ class Library:
             if new_list[0] == delBook: #check if the book title matches with the input
                 listof.remove(line) #remove the contents of the book from the list
                 self.lib.truncate(0) #remove all the content in the .txt file starting from the first byte
-                for i in listof: #iterate for every element in the listof
-                    self.lib.write(i+'\n') #write each element and add new line
+                for i in listof: #iterate for each element in the listof
+                    self.lib.write(i+'\n') #write each element and add a new line
                 break
 
 
@@ -45,8 +47,3 @@ obj1.removeBook()
 
 
 print(obj1)
-        
-
-
-
-
